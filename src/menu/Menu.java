@@ -1,9 +1,16 @@
 package menu;
 
 import java.util.Scanner;
+
 import search.Linear;
+import search.Binary;
 
 public class Menu {
+
+    private static void clearConsole() {
+        System.out.print( "\033[H\033[2J" );
+        System.out.flush();
+    }
 
     public static void main( String[] args ) {
 
@@ -11,6 +18,8 @@ public class Menu {
         int option;
 
         while( true ) {
+
+            clearConsole();
 
             System.out.println( "\n");
             System.out.println( "  |---------------------------------------|" );
@@ -37,9 +46,9 @@ public class Menu {
                     return;
                 }
                 
-                case 1 -> { Linear.run(); }
+                case 1 -> { Linear.run( sc ); }
 
-                case 2 -> {}
+                case 2 -> { Binary.run( sc ); }
 
                 default -> { System.out.println( "  Invalid input..." ); }
         
