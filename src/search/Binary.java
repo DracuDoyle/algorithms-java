@@ -16,7 +16,7 @@ public class Binary {
 
         System.out.println( "\n  Enter " + n + " integers..." );
         for( int i = 0; i < n; i++ ) {
-            System.out.print( "  Element " + (i + 1) + ": " );
+            System.out.print( "  Element " + ( i + 1 ) + ": " );
             array[ i ] = sc.nextInt();
         }
 

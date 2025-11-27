@@ -5,6 +5,9 @@ import java.util.Scanner;
 import search.Linear;
 import search.Binary;
 
+import sort.Bubble;
+import sort.Insertion;
+
 public class Menu {
 
     private static void clearConsole() {
@@ -32,8 +35,12 @@ public class Menu {
             System.out.println( "  Choose an algorithm...\n" );
 
             System.out.println( "  0) Exit" );
+            System.out.println( "\n  --- Search Algorithms ---" );
             System.out.println( "  1) Lineal Search" );
             System.out.println( "  2) Binary Search" );
+            System.out.println( "\n  --- Sort Algorithms ---" );
+            System.out.println( "  3) Bubble Sort" );
+            System.out.println( "  4) Insertion Sort" );
 
             System.out.print( "\n  Option: " );
             option = sc.nextInt();
@@ -45,10 +52,18 @@ public class Menu {
                     System.out.println( "\n  Killing program...\n" );
                     return;
                 }
+
+                // -- Search Algorithms --
                 
                 case 1 -> { Linear.run( sc ); }
 
                 case 2 -> { Binary.run( sc ); }
+
+                // -- Sort Algorithms --
+
+                case 3 -> { Bubble.run( sc ); }
+
+                case 4 -> { Insertion.run( sc ); }
 
                 default -> { System.out.println( "  Invalid input..." ); }
         
